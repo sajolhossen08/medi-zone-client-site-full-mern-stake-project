@@ -1,0 +1,9 @@
+.nav-link:hover{
+    background-color: gray;
+}
+.nav-item{
+    margin-right: 15px;
+}
+.home-link{
+    margin-left: 50px;
+}
