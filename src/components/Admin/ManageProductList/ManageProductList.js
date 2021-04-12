@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ManageProductList = ({product}) => {
+
+    const deletePd = (id) =>{
+        fetch(`https://tranquil-citadel-03817.herokuapp.com/deleteProduct/${id}`, {
+            method: 'delete',
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(result => {
+            console.log(result)
+        })
+    }
+
     return (
         <div>
             <div className="mr-5" style={{display: 'inline-block', marginRight:'50px'}}><h5>Name: {product.name}</h5></div>
             <div  style={{display: 'inline-block'}}><h5>Price: {product.price}</h5></div>
-            <div><button>Delete</button></div>
+            <div><button onClick={() => deletePd(product._id)}>Delete</button></div>
             <hr/>
         </div>
     );

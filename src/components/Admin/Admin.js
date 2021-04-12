@@ -16,7 +16,7 @@ const Admin = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:5050/addProduct`;
+        const url = `https://tranquil-citadel-03817.herokuapp.com/addProduct`;
         console.log(productData)
 
         fetch(url, {
@@ -48,7 +48,7 @@ const Admin = () => {
     const [products, setProducts] =useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5050/product')
+        fetch('https://tranquil-citadel-03817.herokuapp.com/product')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -65,7 +65,7 @@ const Admin = () => {
                 <div className="search-field col-lg-6">
                     <div className="searchContainer">
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <h2>Add Product</h2>
+                        <h2>Add Product</h2>
                             <label>Product name:</label>
                             <input defaultValue="Napa Extra" {...register("name")} required/>
                             <label>Price:</label>
