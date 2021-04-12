@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+.bg-special{
+    background-color: #F1F1F1;
+}
+.product-card{
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 3px;
+}
+.product-img{
+    width: 175px;
+    height: 145px;
+    /* height: 280px; */
+    transition: all 1.02s;
+}
+.product-img:hover{
+    transform: scale(1.05);
+}
