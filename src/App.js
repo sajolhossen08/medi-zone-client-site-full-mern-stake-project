@@ -38,7 +38,7 @@ function App() {
       <Route path="/login">
         <LogIn />
       </Route>
-      <Route path="*">
+      <Route exact path="*">
         <NotFound />
       </Route>
     </Switch>

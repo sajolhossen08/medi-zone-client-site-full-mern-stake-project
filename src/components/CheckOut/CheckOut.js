@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import './CheckOut.css'
 
 const CheckOut = () => {
@@ -28,7 +29,7 @@ const CheckOut = () => {
                 <div>
                     <h3>Name: {product.name}</h3>
                     <h3>Price: {product.price}</h3><br/><br/>
-                    <button className="btn btn-danger">Order</button>
+                    <Link to ="/order"><button className="btn btn-danger">Order</button></Link>
                 </div>
             </div>
         </div>

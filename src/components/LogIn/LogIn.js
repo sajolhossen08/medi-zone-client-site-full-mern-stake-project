@@ -31,8 +31,9 @@ const LogIn = () => {
     console.log(user);
     const loggedInUser = {name: user.displayName, email: user.email, img: user.photoURL};
     localStorage.setItem('user', JSON.stringify(loggedInUser));
-    history.replace(from && 
-      window.location.reload());
+    history.replace(from);
+     
+    window.location.reload();
     // ...
   }).catch((error) => {
     // Handle Errors here.
