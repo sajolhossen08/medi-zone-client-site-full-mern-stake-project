@@ -5,7 +5,7 @@
 
 ### Project Live Link
 
-    **[https://medi-zone-4ae02.web.app/](https://medi-zone-4ae02.web.app/)**
+**[https://medi-zone-4ae02.web.app](https://medi-zone-4ae02.web.app)**
 
 ### Project Server Link:
 
@@ -13,8 +13,8 @@
 
 ## Project Details:
 
-    * Project Type: Single Page Application
-    * Used Tools, Technologies, Frameworks & Library:
+    Project Type: Single Page Application
+     Used:
         1. ReactJS
         2. NodeJS
         3. MongoDB
@@ -25,7 +25,7 @@
         8. Material Ui
         9. Firebase
         10. Heroku
-    * Project Properties:
+    Project Properties:
         1. It's a single page web application
         2. For user authentication firebase is used.
         3. It's look like a e-commerce for buying and selling products.
