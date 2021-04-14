@@ -3,12 +3,14 @@ import './Admin.css';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import ManageProductList from './ManageProductList/ManageProductList';
+import { useHistory } from 'react-router';
 
 
 const Admin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageURL, setIMageURL] = useState(null);
     console.log(imageURL);
+    const history = useHistory();
 
     const onSubmit = data => {
         const productData = {
@@ -26,7 +28,11 @@ const Admin = () => {
             },
             body: JSON.stringify(productData)
         })
-        .then(res => console.log('server side response', res))
+        .then(res => {
+            console.log('server side response', res)
+            alert('Product added');
+            history.replace('/')
+        })
     };
 
     const handleImageUpload = pd =>{
@@ -83,9 +89,20 @@ const Admin = () => {
                 <h2>Manage Product</h2>
                 
                 <h1>Total Products: {products.length} <small><i>items</i></small></h1>
-                {
-                    products.map(product => <ManageProductList product = {product} key= {product._id}></ManageProductList>)
-                }
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Action</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            products.map(product => <ManageProductList product = {product} key= {product._id}></ManageProductList>)
+                        }
+                    </tbody>
+                </table>
             </div>
           </div>
           </div>

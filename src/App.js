@@ -11,8 +11,11 @@ import Admin from './components/Admin/Admin';
 import Footer from './components/Footer/Footer';
 import CheckOut from './components/CheckOut/CheckOut';
 import Order from './components/Order/Order';
+import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
+  
   return (
     <Router>
     <Header />
@@ -23,17 +26,20 @@ function App() {
       <Route path="/home">
         <Home />
       </Route>
-      <Route path="/order">
+      <PrivateRoute path="/order">
         <Order />
-      </Route>
-      <Route path="/admin">
+      </PrivateRoute>
+      <PrivateRoute path="/admin">
         <Admin />
-      </Route>
-      <Route path="/checkout">
+      </PrivateRoute>
+      <PrivateRoute path="/checkout/:id">
         <CheckOut />
-      </Route>
+      </PrivateRoute>
       <Route path="/login">
         <LogIn />
+      </Route>
+      <Route path="*">
+        <NotFound />
       </Route>
     </Switch>
     <Footer/>

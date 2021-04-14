@@ -13,10 +13,16 @@ const Home = () => {
     },[])
     return (
         <div className="container-fluid background-color mb-5">
+            <div className="justify-content-center text-center">
+                <h3>Welcome to</h3>
+                <h1 style = {{borderBottom: '1px solid black', display: 'inline-block'}}>Medi Zone</h1>
+                <p>Here you can buy your needed Medical Products easily <br/>with home-delivery.</p>
+            </div>
+            <hr/>
             {
                 !products.length
                 && <div className="d-flex justify-content-center mt-5">
-                    <CircularProgress color="primary"/>
+                    <CircularProgress color= 'dark'/>
                  </div>
             }
             {
