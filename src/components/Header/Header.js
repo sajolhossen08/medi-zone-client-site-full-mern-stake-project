@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import './Header.css'
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -11,7 +11,7 @@ const Header = () => {
      }else {
         firebase.app();
      }
-
+     const {id} = useParams()
     const user = JSON.parse(localStorage.getItem('user'));
     const history = useHistory();
 
@@ -39,9 +39,6 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/admin">Admin</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/order">Order</Link>
                         </li>
                         <li className="nav-item">
                            {user ? (

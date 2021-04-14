@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  button {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100px;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgb(31, 32, 32) 0%,
+      rgba(13, 13, 14, 0.9) 100%
+    );
+    cursor: pointer;
+  }
+  
+  .search-field {
+    border-radius: 6px;
+    padding-left:  20px;
+    padding-right: 20px;
+    background: #f5f5f5;
+    display: flex;
+  }
+  
+  .search-field .searchContainer {
+    border-radius: 6px;
+    padding: 60px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 500px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgb(87, 86, 86) 0%,
+      rgba(99, 109, 99, 0.9) 100%
+    );
+  }
+  
+  .search-field .searchContainer label {
+    color: white;
+    margin: 14px 0;
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+  }
+  
+  .search-field .searchContainer input {
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    outline: none;
+    font-size: 19px;
+    padding: 3px;
+    background: #ffffff1a;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+.search-field h2{
+    color: white;
+}

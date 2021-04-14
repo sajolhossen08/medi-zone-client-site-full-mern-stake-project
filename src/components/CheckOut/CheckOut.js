@@ -8,7 +8,6 @@ import './CheckOut.css'
 const CheckOut = () => {
     const {id} = useParams();
     const [product, setProduct] = useState({});
-    console.log(product)
 
     useEffect(() =>  {
         fetch(`https://tranquil-citadel-03817.herokuapp.com/products/${id}`)
@@ -16,7 +15,8 @@ const CheckOut = () => {
         .then(data => {
             setProduct(data[0])
         })
-    }, [])
+    }, []);
+
 
     return (
         <div className= "container">
@@ -29,7 +29,7 @@ const CheckOut = () => {
                 <div>
                     <h3>Name: {product.name}</h3>
                     <h3>Price: {product.price}</h3><br/><br/>
-                    <Link to ="/order"><button className="btn btn-danger">Order</button></Link>
+                    <Link to={`/order/${product._id}`}><button className="btn btn-danger">Order</button></Link>
                 </div>
             </div>
         </div>

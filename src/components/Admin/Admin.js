@@ -73,9 +73,9 @@ const Admin = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                         <h2>Add Product</h2>
                             <label>Product name:</label>
-                            <input defaultValue="Napa Extra" {...register("name")} required/>
+                            <input {...register("name")} required/>
                             <label>Price:</label>
-                            <input defaultValue="5" {...register("price")} required/>
+                            <input {...register("price")} required/>
                             <label>Upload product image:</label>
                             <input type="file" required onChange={handleImageUpload}/>
                             <input className="mt-4"   type="submit"/>

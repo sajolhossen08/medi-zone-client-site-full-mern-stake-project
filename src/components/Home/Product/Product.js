@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Product.css';
 
 const Product = ({product}) => {
+    
     return (
         <div className="shadow product-card card col-md-3 col-sm-5 justify-content-center">
             <div className="bg-special text-center rounded my-2 py-3 h-100">
